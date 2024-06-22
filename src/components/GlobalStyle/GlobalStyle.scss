@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
+    --white-color: #fff;
+    --black-color: #162938;
+    --gray-color: #ccc;
+    --text-color: #162938;
+    --header-height: 76px;
+    --primary-color: #6eb8f5;
+    --bg-btn: #162938;
+    --hover-bg: var(--primary-color);
+    --hover-text: #162938;
+    --font-text: "Roboto", sans-serif;
 }
 
 * {
@@ -17,4 +27,68 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
+}
+
+.button {
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid var(--bg-btn);
+    border-radius: 4px;
+    padding: 0.6em 2em;
+    background: var(--bg-btn);
+    transition: 0.2s;
+    min-width: 120px;
+}
+
+.hover-block {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.hover-block:hover {
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem var(--bg-btn);
+    border-radius: 4px;
+}
+
+.button:hover {
+    color: var(--hover-text);
+    transform: translate(-0.25rem, -0.25rem);
+    background: var(--hover-bg);
+    box-shadow: 0.25rem 0.25rem var(--bg-btn);
+}
+
+.button:active {
+    transform: translate(0);
+    box-shadow: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    background-color: #f6f7fb;
+    min-height: 100vh;
+}
+
+.content-wrapper   {
+    position: fixed;
+    background-color: #f4f2f2;
+    top: 0;
+    bottom: 0;
+    /* left: 0;
+    right: 0; */
+    width: 100%;
+    display: flex;
 }
