@@ -1,4 +1,5 @@
 //import
+
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import Profile from '~/pages/Profile';
@@ -7,7 +8,7 @@ import Profile from '~/pages/Profile';
 //chưa login
 const publicRoutes = [
     { path: '/', component: Home},
-    { path: '/login', component: Login}
+    { path: '/login', component: Login, layout: null}
 
 ]
 

@@ -35,8 +35,8 @@ function Sidebar() {
             <div className="sidebar__navbar">
                 <ul className="sidebar__navbar-list">
                     <li className={`sidebar__navbar-item ${activeLv1 ? 'active' : ''}`}>
-                        <div className="navbar-item" onClick={toggleLv1}>
-                            <div className="navbar-item-icon navbar-lv1">
+                        <div className="navbar-item">
+                            <div className="navbar-item-icon navbar-lv1" onClick={toggleLv1}>
                                 <i className="fa-solid fa-caret-down" />
                             </div>
                             <Link to="#" className="navbar-item-link navbar-item-btn button">
@@ -45,8 +45,8 @@ function Sidebar() {
                         </div>
                         <ul className={`sidebar__navbar-list--lv2 ${activeLv1 ? 'active' : ''}`}>
                             <li className={`sidebar__navbar-item--lv2 ${activeLv2 ? 'active' : ''}`}>
-                                <div className="navbar-item" onClick={toggleLv2}>
-                                    <div className="navbar-item-icon navbar-lv2">
+                                <div className="navbar-item">
+                                    <div className="navbar-item-icon navbar-lv2" onClick={toggleLv2}>
                                         <i className="fa-solid fa-caret-down" />
                                     </div>
                                     <Link to="#" className="navbar-item-link navbar-item-btn button">
