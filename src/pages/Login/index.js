@@ -1,21 +1,18 @@
-import './LoginStyle.scss';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './LoginStyle.scss';
 
-// const wrapper = document.querySelector('.wrapper');
-// const loginLink = document.querySelector('.login-link');
-// const registerLink = document.querySelector('.register-link');
+function Login() {
+    const [isActive, setIsActive] = useState(false);
 
-// registerLink.addEventListener('click', ()=> {
-//     wrapper.classList.add('active');
-// });
+    const handleRegisterClick = () => {
+        setIsActive(true);
+    };
 
-// loginLink.addEventListener('click', ()=> {
-//     wrapper.classList.remove('active');
-// });
+    const handleLoginClick = () => {
+        setIsActive(false);
+    };
 
-
-
-function Login({  }) {
     return (
         <div className="bgrLogin">
             <header>
@@ -26,7 +23,7 @@ function Login({  }) {
                     </Link>
                 </nav>
             </header>
-            <div className="wrapper">
+            <div className={`wrapper ${isActive ? 'active' : ''}`}>
                 <div className="form-box login">
                     <h2>Đăng nhập</h2>
                     <form action="#">
@@ -57,7 +54,7 @@ function Login({  }) {
                         <div className="login-register">
                             <p>
                                 Bạn không có tài khoản?{' '}
-                                <a href="#" className="register-link">
+                                <a className="register-link" onClick={handleRegisterClick}>
                                     Đăng ký
                                 </a>
                             </p>
@@ -100,7 +97,7 @@ function Login({  }) {
                         <div className="login-register">
                             <p>
                                 Bạn đã có tài khoản?
-                                <a href="#" className="login-link">
+                                <a className="login-link" onClick={handleLoginClick}>
                                     {' '}
                                     Đăng nhập
                                 </a>
