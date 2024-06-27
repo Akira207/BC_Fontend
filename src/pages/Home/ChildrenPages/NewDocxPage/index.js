@@ -1,5 +1,6 @@
 import styles from './NewDocx.module.scss';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import image from '~/images/image-test.jpg'
 
 const cx = classNames.bind(styles);
@@ -9,18 +10,18 @@ function NewDocxPage() {
         <div className={cx('page-item')}>
             <div className={cx('page__newdocx', 'c-11')}>
                 <div className={cx('page__title')}>
-                    <a href="#">Tài liệu mới</a>
+                    <Link to="">Tài liệu mới</Link>
                 </div>
                 <ul className={cx('page__newdocx-list')}>
                     <li className={cx('page__newdocx-item', 'c-2', 'm-2-4')}>
-                        <a href="#" className={cx('page__newdocx-link')}>
+                        <Link to="" className={cx('page__newdocx-link')}>
                             <div className={cx('page__newdocx--image', 'hover-block')}>
                                 <img src={image} alt="tên tài liệu" />
                             </div>
                             <div className={cx('page__newdocx--title')}>
                                 <span className={cx('page__newdocx--title-text')}>Tên tài liệu</span>
                             </div>
-                        </a>
+                        </Link>
                         <div className={cx('page__newdocx--decription')}>
                             <div className={cx('page__newdocx-icon')}>
                                 <i className={cx('favorite_icon', 'fa-solid', 'fa-heart')} data="like" />

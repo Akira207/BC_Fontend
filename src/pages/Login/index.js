@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
+import classNames from 'classnames/bind';
+import styles from './LoginStyle.module.scss';
 import { Link } from 'react-router-dom';
-import './LoginStyle.scss';
+import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
+
+
+const cx = classNames.bind(styles);
 
 function Login() {
     const [isActive, setIsActive] = useState(false);
@@ -14,90 +20,90 @@ function Login() {
     };
 
     return (
-        <div className="bgrLogin">
+        <div className={cx('bgrLogin')}>
             <header>
-                <h2 className="logo">BC Online</h2>
-                <nav className="navigation">
+                <h2 className={cx('logo')}>BC Online</h2>
+                <nav className={cx('navigation')}>
                     <Link to="/">
-                        <button className="btnLogin-popup">Trở về</button>
+                        <button className={cx('btnLogin-popup')}>Trở về</button>
                     </Link>
                 </nav>
             </header>
-            <div className={`wrapper ${isActive ? 'active' : ''}`}>
-                <div className="form-box login">
+            <div className={cx('wrapper', { active: isActive })}>
+                <div className={cx('form-box', 'login')}>
                     <h2>Đăng nhập</h2>
                     <form action="#">
-                        <div className="input-box">
-                            <span className="icon">
-                                <ion-icon name="mail" />
+                        <div className={cx('input-box')}>
+                            <span className={cx('icon')}>
+                                <FontAwesomeIcon icon={faEnvelope} />
                             </span>
                             <input type="email" required="" />
                             <label>Email</label>
                         </div>
-                        <div className="input-box">
-                            <span className="icon">
-                                <ion-icon name="lock-closed" />
+                        <div className={cx('input-box')}>
+                            <span className={cx('icon')}>
+                                <FontAwesomeIcon icon={faLock} />
                             </span>
                             <input type="password" required="" />
                             <label>Mật khẩu</label>
                         </div>
-                        <div className="remember-forgot">
+                        <div className={cx('remember-forgot')}>
                             <label>
                                 <input type="checkbox" />
                                 Lưu mật khẩu
                             </label>
                             <a href="#">Quên mật khẩu?</a>
                         </div>
-                        <button type="submit" className="btn">
+                        <button type="submit" className={cx('btn')}>
                             Đăng nhập
                         </button>
-                        <div className="login-register">
+                        <div className={cx('login-register')}>
                             <p>
                                 Bạn không có tài khoản?{' '}
-                                <a className="register-link" onClick={handleRegisterClick}>
+                                <a className={cx('register-link')} onClick={handleRegisterClick}>
                                     Đăng ký
                                 </a>
                             </p>
                         </div>
                     </form>
                 </div>
-                <div className="form-box register">
+                <div className={cx('form-box', 'register')}>
                     <h2>Đăng ký</h2>
                     <form action="#">
-                        <div className="input-box">
-                            <span className="icon">
-                                <ion-icon name="person" />
+                        <div className={cx('input-box')}>
+                            <span className={cx('icon')}>
+                                <FontAwesomeIcon icon={faUser} />
                             </span>
                             <input type="text" required="" />
                             <label>Tên đăng nhập</label>
                         </div>
-                        <div className="input-box">
-                            <span className="icon">
-                                <ion-icon name="mail" />
+                        <div className={cx('input-box')}>
+                            <span className={cx('icon')}>
+                                <FontAwesomeIcon icon={faEnvelope} />
                             </span>
                             <input type="email" required="" />
                             <label>Email</label>
                         </div>
-                        <div className="input-box">
-                            <span className="icon">
-                                <ion-icon name="lock-closed" />
+                        <div className={cx('input-box')}>
+                            <span className={cx('icon')}>
+                                <FontAwesomeIcon icon={faLock} />
                             </span>
                             <input type="password" required="" />
                             <label>Mật khẩu</label>
                         </div>
-                        <div className="remember-forgot">
+                        <div className={cx('remember-forgot')}>
                             <label>
                                 <input type="checkbox" />
                                 Bạn đã đọc và đồng ý với điều khoản của chúng tôi
                             </label>
                         </div>
-                        <button type="submit" className="btn">
+                        <button type="submit" className={cx('btn')}>
                             Đăng ký
                         </button>
-                        <div className="login-register">
+                        <div className={cx('login-register')}>
                             <p>
                                 Bạn đã có tài khoản?
-                                <a className="login-link" onClick={handleLoginClick}>
+                                <a className={cx('login-link')} onClick={handleLoginClick}>
                                     {' '}
                                     Đăng nhập
                                 </a>

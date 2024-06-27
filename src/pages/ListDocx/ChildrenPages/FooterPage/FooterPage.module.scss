@@ -1,0 +1,30 @@
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border-top: 1px solid var(--gray-color);
+    background-color: var(--black-color);
+    color: var(--white-color);
+    margin-bottom: var(--header-height);
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 32px;
+   justify-content: space-between;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-family: var(--font-text);
+    color: var(--white-color);
+    text-decoration: none;
+}

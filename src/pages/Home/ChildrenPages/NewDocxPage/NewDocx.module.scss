@@ -1,26 +1,6 @@
-.page-item {
-    margin: 16px 0 32px 0;
-    padding: 12px;
-    display: flex;
-    min-height: 220px;
-    box-shadow: 3px 3px 6px #ccc;
-}
-
 .page__newdocx {
     position: relative;
     
-}
-
-.page__title a{
-    color: var(--black-color);
-    text-decoration: none;
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-}
-
-.page__title:hover a {
-    color: var(--primary-color);
-    text-decoration: underline;
 }
 
 .page__newdocx-list {

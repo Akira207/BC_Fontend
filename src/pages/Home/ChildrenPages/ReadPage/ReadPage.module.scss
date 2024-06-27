@@ -1,0 +1,16 @@
+
+.page__reading-history {
+    display: block;
+}
+
+.page__reading-history--noLogin,
+.page__reading-history--noHis {
+    margin: 32px 0 12px 16px;
+    font-size: 18px;
+    font-family: var(--font-text);
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+
