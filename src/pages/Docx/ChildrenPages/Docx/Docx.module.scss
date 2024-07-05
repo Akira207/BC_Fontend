@@ -1,9 +1,133 @@
-.item-decription {
-    box-shadow: 1px 2px 3px var(--gray-color);
-    height: 100vh;  
-    padding: 32px;
+.wrapper {
+    display: flex;    
 }
 
-.title-item {
-    height: 120px; 
-}   
+.wrapper-descrition {
+    display: flex;
+    width: 0%;
+    align-items: center;
+}
+
+.item-descrition {
+    box-shadow: 1px 2px 3px var(--gray-color);
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    z-index: 28;
+    overflow-y: auto;
+}
+
+.title {
+    height: 48px;
+    color: var(--primary-color);
+    font-size: 24px;
+    font-family: var(--font-text);
+    line-height: 48px;
+}
+
+.updateBy {
+    margin-top: 24px;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: 16px;
+    height: 40px;
+
+}
+
+.updateBy-name {
+    color: var(--primary-color);
+    font-family: var(--font-text);
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.updateDaty {
+    margin-top: 24px;
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+.icon {
+    height: 24px;
+    margin-top: 24px;
+    font-size: 16px;
+    color: var(--primary-color);
+    
+}
+
+.icon-heart {
+    color: var(--red-color);
+}
+
+.count {
+    margin-left: 12px;
+}
+
+.decription {
+    margin-top: 24px;
+    height: auto;
+}
+
+.decription-text {
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px ;
+    font-family: var(--font-text);
+    font-size: 14px;
+    height: 160px;
+    overflow-y: auto;
+}
+
+.wrapper-docx {
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+    overflow-y: auto;
+    
+    
+}
+
+.docx {
+    overflow-y: auto;
+    
+}
+
+
+
+canvas {
+    width: 100%; /* hoặc bất kỳ kích thước nào bạn muốn */
+    height: auto;
+}
+
+.zoom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30px;
+    left: -17px;
+    height: 35px;
+    width: 35px;
+    background-color: var(--white-color);
+    border: 1px solid rgb(83, 83, 83);
+    border-radius: 50%;
+    transition: transform 0.5s ease, right 0.5s ease;
+    z-index: 30;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--hover-bg);
+        transform: translateX(70%);
+    }
+
+    // &.active {
+    //     right: -17px;
+
+    //     &:hover {
+    //         transform: translateX(0%);
+    //     }
+    // }
+}

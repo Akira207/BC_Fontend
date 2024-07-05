@@ -7,7 +7,7 @@ const cx = classNames.bind(styles);
 
 function ChildrenPages() {
     return (
-        <div className={cx('page-wrapper', 'c-9-6')}>
+        <div className={cx('page-wrapper','no-scrollbar', 'c-9-6')}>
             <Docx />    
         </div>
     );

@@ -12,7 +12,8 @@
     transition: background-color 0.5s ease;
     background-color: #fff;
     box-shadow: 1px 2px 3px var(--gray-color);
-    z-index: 10;
+    z-index: 100;
+    overflow: hidden;
 }
 .header__logo-link {
     display: flex;

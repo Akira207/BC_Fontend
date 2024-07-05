@@ -10,7 +10,7 @@ function NewDocxPage() {
         <div className={cx('page-item')}>
             <div className={cx('page__newdocx', 'c-11')}>
                 <div className={cx('page__title')}>
-                    <Link to="">Tài liệu mới</Link>
+                    <Link to="/list-docx">Tài liệu mới</Link>
                 </div>
                 <ul className={cx('page__newdocx-list')}>
                     <li className={cx('page__newdocx-item', 'c-2', 'm-2-4')}>

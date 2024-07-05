@@ -8,6 +8,7 @@
     --text-color: #162938;
     --header-height: 76px;
     --primary-color: #6eb8f5;
+    --red-color: #e96767;
     --bg-btn: #162938;
     --hover-bg: var(--primary-color);
     --hover-text: #162938;
@@ -92,4 +93,13 @@ a {
     right: 0; */
     width: 100%;
     display: flex;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none; 
+    }
 }

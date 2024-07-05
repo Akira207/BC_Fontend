@@ -1,17 +1,71 @@
+import React, { useState } from 'react';
 import styles from './Docx.module.scss';
 import classNames from 'classnames/bind';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight, faDownload, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import image from '~/images/image-test.jpg';
-
+import PdfViewer from './PdfViewer'; // Import component PdfViewer
+import FooterPage from '../FooterPage';
 const cx = classNames.bind(styles);
 
-function NewDocxPage() {
+function Docx() {
+    const [isActive, setIsActive] = useState(false);
+
+    const handleClick = () => {
+        setIsActive(!isActive);
+    };
+
+    const wrapperDescritionStyle = {
+        width: isActive ? '25%' : '0%',
+        opacity: isActive ? '1': '0',
+        transition: 'all ease-in-out 0.75s'
+    };
+
+    const wrapperDocxStyle = {
+        width: isActive ? '75%' : '100%',
+        transition: 'all ease-in-out 0.75s'
+    };
+
     return (
-        <div className={cx('item-decription', 'c-3')}>
-            <div className={cx('item-title')}>Tên tài liệu</div>
-            
+        <div className={cx('wapper', 'row', 'no-gutters')}>
+            <div className={cx('wrapper-descrition')} style={wrapperDescritionStyle}>
+                <div className={cx('item-descrition')}>
+                    <div className={cx('title')}>Tên tài liệu</div>
+                    <div className={cx('updateBy')}>
+                        Đăng bởi:{' '}
+                        <Link className={cx('updateBy-name')} to="">
+                            Kira
+                        </Link>
+                    </div>
+                    <div className={cx('updateDay')}>
+                        Cập nhật lần cuối: <span className={cx('DayText')}>12/01/2022</span>
+                    </div>
+                    <div className={cx('icon')}>
+                        <FontAwesomeIcon icon={faDownload} />
+                        <span className={cx('count')}>100</span>
+                    </div>
+                    <div className={cx('icon', 'icon-heart')}>
+                        <FontAwesomeIcon icon={faHeart} />
+                        <span className={cx('count')}>5</span>
+                    </div>
+                    <div className={cx('decription')}>
+                        Mô tả tài liệu:
+                        <div className={cx('decription-text')}>viết linh tinh gì đó</div>
+                    </div>
+                </div>
+            </div>
+            <div className={cx('wrapper-docx', 'no-scrollbar')} style={wrapperDocxStyle}>
+            <div className={cx('zoom', { active: isActive })} onClick={handleClick}>
+                    <FontAwesomeIcon icon={isActive ? faArrowLeft : faArrowRight} />
+                </div>
+                <div className={cx('docx')}>
+                    <PdfViewer url="/iloveyou.pdf" /> 
+                    
+                </div>
+                <FooterPage />             
+            </div>
         </div>
     );
 }
 
-export default NewDocxPage;
+export default Docx;

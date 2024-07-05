@@ -30,21 +30,12 @@ function NewDocxPage() {
                                     <span className={cx('item-title-text')}>Đăng bởi:</span>
                                 </div>
                             </Link>
-                            {/* <div className={cx('page__newdocx--decription')}>
-                                <div className={cx('page__newdocx-icon')}>
-                                    <i className={cx('favorite_icon', 'fa-solid', 'fa-heart')} data="like" />
-                                    fa-regular fa-heart *
-                                </div>
-                                <div className={cx('page__newdocx-viewed')}>
-                                    <span className={cx('viewed')}>1000</span> Viewed
-                                </div>
-                            </div> */}
+
                             <div className={cx('item-date')}>
                                 Ngày đăng: <span className={cx('item-title-text')}>2022-05-01</span>
                             </div>
                         </div>
                     </li>
-                    
                 </ul>
             </div>
         </div>
@@ -52,3 +43,15 @@ function NewDocxPage() {
 }
 
 export default NewDocxPage;
+
+{
+    /* <div className={cx('page__newdocx--decription')}>
+                                <div className={cx('page__newdocx-icon')}>
+                                    <i className={cx('favorite_icon', 'fa-solid', 'fa-heart')} data="like" />
+                                    fa-regular fa-heart *
+                                </div>
+                                <div className={cx('page__newdocx-viewed')}>
+                                    <span className={cx('viewed')}>1000</span> Viewed
+                                </div>
+                            </div> */
+}
