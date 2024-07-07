@@ -1,5 +1,5 @@
 import classNames from 'classnames/bind';
-import styles from './ChildrenPages.scss';
+import styles from './ChildrenPages.module.scss';
 
 import NewDocxPage from './NewDocxPage';
 import ReadPage from './ReadPage';
