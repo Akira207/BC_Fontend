@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from '~/components/GlobalStyle/Adminstyle.module.scss';
 import classNames from 'classnames/bind';
 import { faEye, faMagnifyingGlass, faPenToSquare, faPlus } from '@fortawesome/free-solid-svg-icons';
-
+import imgTest from '~/images/image-test.jpg'
 const cx = classNames.bind(styles);
 
 function AdminHome() {
@@ -28,8 +28,8 @@ function AdminHome() {
                             <div id="stars" />
                         </div>
                         <div id="glow">
-                            <div className="circle" />
-                            <div className="circle" />
+                            <div className={cx('circle')}/>
+                            <div className={cx('circle')}/>
                         </div>
                     </button>
                 </form>
@@ -56,8 +56,8 @@ function AdminHome() {
                         <tbody>
                             <tr className={cx('table-dark-item')}>
                                 <td />
-                                <td>
-                                    <img src="image" alt="" />
+                                <td className={cx('block-img')} >
+                                    <img src={imgTest} alt="" />
                                 </td>
                                 <td>java intern cv</td>
                                 <td>0</td>

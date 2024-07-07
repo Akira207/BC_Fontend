@@ -21,7 +21,7 @@ function Login() {
 
     return (
         <div className={cx('bgrLogin')}>
-            <header>
+            <header className={cx('header')} >
                 <h2 className={cx('logo')}>BC Online</h2>
                 <nav className={cx('navigation')}>
                     <Link to="/">

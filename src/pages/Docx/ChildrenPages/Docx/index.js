@@ -6,6 +6,7 @@ import { faArrowLeft, faArrowRight, faDownload, faHeart } from '@fortawesome/fre
 import { Link } from 'react-router-dom';
 import PdfViewer from './PdfViewer'; // Import component PdfViewer
 import FooterPage from '../FooterPage';
+
 const cx = classNames.bind(styles);
 
 function Docx() {
@@ -17,13 +18,23 @@ function Docx() {
 
     const wrapperDescritionStyle = {
         width: isActive ? '25%' : '0%',
-        opacity: isActive ? '1': '0',
-        transition: 'all ease-in-out 0.75s'
+        opacity: isActive ? '1' : '0',
+        transition: 'all ease-in-out 0.75s',
     };
 
     const wrapperDocxStyle = {
         width: isActive ? '75%' : '100%',
-        transition: 'all ease-in-out 0.75s'
+        transition: 'all ease-in-out 0.75s',
+    };
+
+    const handleDownload = () => {
+        const pdfUrl = '/iloveyou.pdf'; // Đường dẫn đến file PDF, bạn có thể thay đổi tùy ý
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.setAttribute('download', 'ten-file.pdf'); // Đặt tên file khi tải xuống
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     return (
@@ -52,17 +63,24 @@ function Docx() {
                         Mô tả tài liệu:
                         <div className={cx('decription-text')}>viết linh tinh gì đó</div>
                     </div>
+                    <div className={cx('download')}  onClick={handleDownload}>
+                        <span className={cx('linkDownload')}>
+                            Download
+                        </span>
+                    </div>
                 </div>
             </div>
-            <div className={cx('wrapper-docx', 'no-scrollbar')} style={wrapperDocxStyle}>
-            <div className={cx('zoom', { active: isActive })} onClick={handleClick}>
+            <div className={cx('wrapper-notOverflow')} style={wrapperDocxStyle}>
+                <div className={cx('zoom', { active: isActive })} onClick={handleClick}>
                     <FontAwesomeIcon icon={isActive ? faArrowLeft : faArrowRight} />
                 </div>
-                <div className={cx('docx')}>
-                    <PdfViewer url="/iloveyou.pdf" /> 
-                    
+
+                <div className={cx('wrapper-docx')}>
+                    <div className={cx('docx')}>
+                        <PdfViewer url="/iloveyou.pdf" />
+                    </div>
+                    <FooterPage />
                 </div>
-                <FooterPage />             
             </div>
         </div>
     );

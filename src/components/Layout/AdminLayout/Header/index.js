@@ -9,7 +9,7 @@ const cx = classNames.bind(styles);
 function HeaderAdmin() {
     return (
         <header className={cx('header')}>
-            <div className={cx('header__container', 'grid', 'wide')}>
+            <div className={cx('header__container',  'wide')}>
                 <div className={cx('logo', 'm-1', 'c-1')}>
                     <Link to="/">
                         <img src='' alt="logo" />
