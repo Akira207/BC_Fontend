@@ -64,7 +64,7 @@ function Docx() {
                         <div className={cx('decription-text')}>viết linh tinh gì đó</div>
                     </div>
                     <div className={cx('download')}  onClick={handleDownload}>
-                        <span className={cx('linkDownload')}>
+                        <span className={cx('linkDownload', 'button')}>
                             Download
                         </span>
                     </div>

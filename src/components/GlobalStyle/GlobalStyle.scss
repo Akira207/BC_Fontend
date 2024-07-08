@@ -49,10 +49,14 @@ body {
 .hover-block:hover {
     transform: translate(-0.25rem, -0.25rem);
     box-shadow: 0.25rem 0.25rem var(--bg-btn);
-    border-radius: 4px;
+    background: var(--hover-bg);
     
 }
 
+.hover-block:active {
+    transform: translate(0);
+    box-shadow: none;
+}
 .button:hover {
     color: var(--hover-text);
     transform: translate(-0.25rem, -0.25rem);
