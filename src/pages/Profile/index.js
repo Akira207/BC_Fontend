@@ -1,8 +1,7 @@
-function Home() {
-    return ( 
-    <h2>Home Page</h2>
-    
-     );
+import ChildrenPages from './ChildrenPages';
+
+function Profile() {
+    return <ChildrenPages />;
 }
 
-export default Home;
+export default Profile;

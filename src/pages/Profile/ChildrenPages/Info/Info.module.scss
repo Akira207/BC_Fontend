@@ -1,0 +1,30 @@
+.wrapper {
+    height: 164px;
+    padding: 24px;
+    box-shadow: 1px 2px 3px #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-info {
+    
+}
+
+.user-text {
+    color: var(--text-color);
+    font-size: 16px;
+    font-family: var(--font-text);
+    padding: 5px;
+}
+
+.user-data {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+
+.user-interact {
+    align-items: center;
+    
+}
