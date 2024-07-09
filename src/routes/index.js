@@ -1,5 +1,4 @@
 //import
-
 import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import Profile from '~/pages/Profile';
@@ -8,6 +7,7 @@ import Docx from '~/pages/Docx';
 import AdminHome from '~/pages/AdminHome';
 import AdminCreat from '~/pages/AdminCreat';
 import AdminUpdateDocument from '~/pages/AdminUpdateDocument';
+import UpdateInfo from '~/pages/UpdateInfo';
 import { AdminLayout, AfterLogin, ProfileLayout } from '~/components/Layout';
 
 //chưa login
@@ -16,13 +16,14 @@ const publicRoutes = [
     { path: '/login', component: Login, layout: null },
     { path: '/list-docx', component: ListDocx },
     { path: '/docx/:id', component: Docx },
-    { path: '/profile/id', component: Profile, layout: ProfileLayout },
+    { path: '/update-info/id', component: UpdateInfo, layout: ProfileLayout },
+    
 ];
 
 //đã login
 const privateRoutes = [
     { path: '/', component: Home, layout: AfterLogin },
-    { path: '/profile', component: Profile },
+    { path: '/profile/id', component: Profile, layout: ProfileLayout },
 ];
 
 const forAdmin = [

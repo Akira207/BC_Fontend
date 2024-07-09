@@ -1,0 +1,76 @@
+.wrapper {  
+    padding: 24px;
+}
+
+.title {
+    height: 48px;
+    color: var(--text-color);
+    font-size: 24px;
+    font-family: var(--font-text);
+    line-height: 48px;
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
+}
+
+.table-border {
+    width: 100%;
+    border: 1px solid var(--gray-color);
+}
+
+.table-border th,
+.table-border td {
+    border: 1px solid var(--gray-color);
+    padding: 12px;
+}
+
+
+.th-name {
+    width: 35%;
+}
+
+.th-uploader {
+    width: 20%;
+}
+
+.th-date {
+    width: 20%;
+}
+
+.th-actions {
+    width: 25%;
+}
+
+.read-date {
+    display: flex;
+    justify-content: center;
+}
+
+
+.ellipsis {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 40px; 
+}
+
+.icon { 
+    margin-right: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
+}
+
+a .icon {
+    text-decoration: none;
+    color: var(--primary-color);
+}

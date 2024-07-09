@@ -21,16 +21,13 @@ function Info() {
                 </div>
             </div>
             <div className={cx('c-3', 'user-interact')}>
-                <div className={cx('user-text')}>
-                    <FontAwesomeIcon icon={faHeart} />
-                    <span className={cx('user-data')}> 3</span>
+                <div className={cx('user-text')}>                   
+                    Email: <span className={cx('user-data')}>Admin@gmail.com</span>             
                 </div>
                 <div className={cx('user-text')}>
-                    Ngày sinh: <span className={cx('user-data')}>18/01/2003</span>
+                    Phone: <span className={cx('user-data')}>0912 </span>
                 </div>
-                <div className={cx('user-text')}>
-                    Quyền hạn: <span className={cx('user-data')}>Người dùng</span>
-                </div>
+               
             </div>
         </div>
     );

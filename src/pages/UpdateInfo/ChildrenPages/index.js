@@ -1,9 +1,9 @@
 import classNames from 'classnames/bind';
 import styles from './ChildrenPages.scss';
-import Info from './Info';
-import Read from './Read';
+
+import Read from './FormUpdate';
 import FooterPage from './FooterPage';
-import Like from './Like';
+
 
 const cx = classNames.bind(styles);
 
@@ -11,9 +11,7 @@ function ChildrenPages() {
     return (
         <div className={cx('page-wrapper', 'c-11')}>
             <div className={cx('page-main')}>
-                <Info />
                 <Read />
-                <Like />
             </div>
             <FooterPage />
         </div>

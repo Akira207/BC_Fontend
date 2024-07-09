@@ -1,0 +1,73 @@
+.wrapper {  
+    padding: 24px;
+}
+
+
+.list-like {
+    padding: 12px 0;
+}
+
+.title {
+    height: 48px;
+    color: var(--text-color);
+    font-size: 24px;
+    font-family: var(--font-text);
+    line-height: 48px;
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
+}
+
+.table {
+    color: var(--white-color);
+    padding: 12px;
+    background-color: var(--bg-btn);
+    width: 50%;
+    border: 1px solid var(--gray-color);
+    border-radius: 24px;
+}
+
+.th-name {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+
+.th-actions {
+    width: 20%;
+}
+
+.td-active {
+    display: flex;
+    justify-content: center;
+}
+
+.ellipsis {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    max-width: 40px; 
+}
+
+.icon { 
+    margin-right: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white-color);
+
+    &:hover {
+        text-decoration: underline;
+        color: var(--primary-color);
+    }
+}
+
+a .icon {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
