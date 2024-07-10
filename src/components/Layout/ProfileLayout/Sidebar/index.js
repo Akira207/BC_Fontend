@@ -17,50 +17,43 @@ function Sidebar() {
                             <FontAwesomeIcon icon={faUser} />
                         </Link>
                     </div>
-                    
                 </div>
             </div>
             <div className={cx('sidebar__navbar')}>
                 <ul className={cx('sidebar__navbar-list')}>
                     <li className={cx('sidebar__navbar-item')}>
                         <div className={cx('navbar-item')}>
-                            <div className={cx('navbar-item-icon', 'hover-block')}>
-                                <FontAwesomeIcon icon={faHome} />
-                            </div>
-                            <div className={cx('navbar-item-text')}>
-                                Home
-                            </div>
-                        </div>          
+                            <Link to="/">
+                                <div className={cx('navbar-item-icon', 'hover-block')}>
+                                    <FontAwesomeIcon icon={faHome} />
+                                </div>
+                            </Link>
+                            <div className={cx('navbar-item-text')}>Home</div>
+                        </div>
                     </li>
                     <li className={cx('sidebar__navbar-item')}>
                         <div className={cx('navbar-item')}>
                             <div className={cx('navbar-item-icon', 'hover-block')}>
                                 <FontAwesomeIcon icon={faBook} />
                             </div>
-                            <div className={cx('navbar-item-text')}>
-                                Đã đọc
-                            </div>
-                        </div>          
+                            <div className={cx('navbar-item-text')}>Đã đọc</div>
+                        </div>
                     </li>
                     <li className={cx('sidebar__navbar-item')}>
                         <div className={cx('navbar-item')}>
                             <div className={cx('navbar-item-icon', 'hover-block')}>
                                 <FontAwesomeIcon icon={faHeart} />
                             </div>
-                            <div className={cx('navbar-item-text')}>
-                                Yêu thích
-                            </div>
-                        </div>          
+                            <div className={cx('navbar-item-text')}>Yêu thích</div>
+                        </div>
                     </li>
                     <li className={cx('sidebar__navbar-item')}>
                         <div className={cx('navbar-item')}>
                             <div className={cx('navbar-item-icon', 'hover-block')}>
                                 <FontAwesomeIcon icon={faPlus} />
                             </div>
-                            <div className={cx('navbar-item-text')}>
-                                Đăng tài liệu
-                            </div>
-                        </div>          
+                            <div className={cx('navbar-item-text')}>Đăng tài liệu</div>
+                        </div>
                     </li>
                 </ul>
             </div>
