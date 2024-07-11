@@ -8,8 +8,9 @@ import AdminHome from '~/pages/AdminHome';
 import AdminCreat from '~/pages/AdminCreat';
 import AdminUpdateDocument from '~/pages/AdminUpdateDocument';
 import UpdateInfo from '~/pages/UpdateInfo';
-import Read from '~/pages/Read';
 import { AdminLayout, AfterLogin, ProfileLayout } from '~/components/Layout';
+import ListLike from '~/pages/ListLike';
+import HistoryRead from '~/pages/HistoryRead';
 
 //chưa login
 const publicRoutes = [
@@ -17,8 +18,8 @@ const publicRoutes = [
     { path: '/login', component: Login, layout: null },
     { path: '/list-docx', component: ListDocx },
     { path: '/docx/:id', component: Docx },
-    { path: '/profile/id', component: Profile, layout: ProfileLayout },
-    { path: '/Read', component: Read, layout: ProfileLayout },
+    { path: '/Likes', component: ListLike, layout: ProfileLayout },
+    { path: '/HistoryRead', component: HistoryRead, layout: ProfileLayout },
     { path: '/admin', component: AdminHome, layout: AdminLayout },
     
     
@@ -28,6 +29,7 @@ const publicRoutes = [
 const privateRoutes = [
     { path: '/', component: Home, layout: AfterLogin },
     { path: '/update-info/id', component: UpdateInfo, layout: ProfileLayout },
+    { path: '/profile/id', component: Profile, layout: ProfileLayout },
 
     
 ];

@@ -1,9 +1,9 @@
 import ChildrenPages from './ChildrenPages';
 
-import './Read.module.scss';
+import './ListLike.module.scss';
 
-function Read() {
+function ListLike() {
     return <ChildrenPages />;
 }
 
-export default Read;
+export default ListLike;

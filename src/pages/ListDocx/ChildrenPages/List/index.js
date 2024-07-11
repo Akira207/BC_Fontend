@@ -2,10 +2,17 @@ import styles from './List.module.scss';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import image from '~/images/image-test.jpg';
-
+import Pagination from './Pagination';
+import { useState } from 'react';
 const cx = classNames.bind(styles);
 
 function NewDocxPage() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const totalPages = 10; 
+
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
     return (
         <div className={cx('page-item')}>
             <div className={cx('', 'c-12')}>
@@ -37,6 +44,8 @@ function NewDocxPage() {
                         </div>
                     </li>
                 </ul>
+
+                <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
             </div>
         </div>
     );
