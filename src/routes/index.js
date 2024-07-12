@@ -11,6 +11,7 @@ import UpdateInfo from '~/pages/UpdateInfo';
 import { AdminLayout, AfterLogin, ProfileLayout } from '~/components/Layout';
 import ListLike from '~/pages/ListLike';
 import HistoryRead from '~/pages/HistoryRead';
+import ChangePass from '~/pages/ChangePass';
 
 //chưa login
 const publicRoutes = [
@@ -21,6 +22,7 @@ const publicRoutes = [
     { path: '/Likes', component: ListLike, layout: ProfileLayout },
     { path: '/HistoryRead', component: HistoryRead, layout: ProfileLayout },
     { path: '/admin', component: AdminHome, layout: AdminLayout },
+    { path: '/ChangePass', component: ChangePass, layout: null },
     
     
 ];

@@ -30,7 +30,10 @@ function Header() {
                 <ul className={cx('user-menu')}>
                     <li className={cx('menu-item')}>
                         <Link className={cx('menu-item-link')}>Thông tin cá nhân</Link>
-                    </li>                 
+                    </li>   
+                    <li className={cx('menu-item')}>
+                        <Link className={cx('menu-item-link')}>Đổi mật khẩu</Link>
+                    </li>               
                     <li className={cx('menu-item')}>
                         <Link className={cx('menu-item-link')}>Đăng xuất</Link>
                     </li>
